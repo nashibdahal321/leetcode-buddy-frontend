@@ -1,0 +1,27 @@
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.category-box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-box:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
