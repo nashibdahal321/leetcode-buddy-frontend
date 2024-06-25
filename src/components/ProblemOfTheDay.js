@@ -7,7 +7,7 @@ const ProblemOfTheDay = () => {
 
     const fetchProblemOfTheDay = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/problem_of_the_day/');
+            const response = await axios.get('https://leetcode-buddy-9528fc5b9687.herokuapp.com/api/problem_of_the_day/');
             setProblem(response.data);
         } catch (error) {
             console.error("Error fetching the problem of the day", error);

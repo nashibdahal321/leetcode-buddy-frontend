@@ -9,7 +9,7 @@ const Categories = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/category/all/');
+                const response = await axios.get('https://leetcode-buddy-9528fc5b9687.herokuapp.com/api/category/all/');
                 setCategories(response.data);
             } catch (error) {
                 console.error('Error fetching categories:', error);

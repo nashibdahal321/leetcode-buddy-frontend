@@ -9,7 +9,7 @@ const CategoryPage = () => {
     useEffect(() => {
         const fetchProblems = async () => {
             try {
-                const response = await axios.post('http://localhost:8000/api/category/problems/', { category_name: categoryName });
+                const response = await axios.post('https://leetcode-buddy-9528fc5b9687.herokuapp.com/api/category/problems/', { category_name: categoryName });
                 setProblems(response.data);
             } catch (error) {
                 console.error('Error fetching problems:', error);
