@@ -1,7 +1,8 @@
+// src/components/Categories.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Categories.css'; // Import the CSS file for styling
+import './Categories.css';
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);

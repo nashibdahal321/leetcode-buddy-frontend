@@ -1,6 +1,7 @@
 // src/components/ProblemOfTheDay.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './ProblemOfTheDay.css';
 
 const ProblemOfTheDay = () => {
     const [problem, setProblem] = useState(null);
@@ -15,17 +16,17 @@ const ProblemOfTheDay = () => {
     };
 
     return (
-        <div className="p-4">
-            <button onClick={fetchProblemOfTheDay} className="bg-blue-500 text-white p-2 rounded">
+        <div className="problem-of-the-day">
+            <button onClick={fetchProblemOfTheDay} className="fetch-button">
                 Problem of the Day
             </button>
             {problem && (
-                <div className="mt-4">
-                    <h2 className="text-2xl">{problem.title}</h2>
+                <div className="problem-details">
+                    <h2 className="problem-title">{problem.title}</h2>
                     <p>{problem.description}</p>
                     <p><strong>Category:</strong> {problem.category}</p>
                     <p><strong>Difficulty:</strong> {problem.difficulty}</p>
-                    <a href={problem.link} className="text-blue-500" target="_blank" rel="noopener noreferrer">View Problem</a>
+                    <a href={problem.link} className="view-problem-link" target="_blank" rel="noopener noreferrer">View Problem</a>
                 </div>
             )}
         </div>

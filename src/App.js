@@ -16,10 +16,10 @@ function App() {
                 <ProblemOfTheDay />
             </main>
             <Router>
-                    <Routes>
-                        <Route path="/" element={<Categories />} />
-                        <Route path="/category/:categoryName" element={<CategoryPage />} />
-                    </Routes>
+                <Routes>
+                    <Route path="/" element={<Categories />} />
+                    <Route path="/category/:categoryName" element={<CategoryPage />} />
+                </Routes>
             </Router>
         </div>
     );

@@ -1,6 +1,8 @@
+// src/components/CategoryPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './CategoryPage.css';
 
 const CategoryPage = () => {
     const { categoryName } = useParams();
@@ -20,15 +22,14 @@ const CategoryPage = () => {
     }, [categoryName]);
 
     return (
-        <div>
+        <div className="category-page">
             <h2>Problems in {categoryName}</h2>
-            <ul>
+            <ul className="problems-list">
                 {problems.map((problem) => (
-                    <div>
-                        <li key={problem.id}>{problem.title}</li>
-                        <li><a href={problem.link} className="text-blue-500" target="_blank" rel="noopener noreferrer">View Problem</a></li>
-                    </div>
-                    
+                    <li key={problem.id} className="problem-item">
+                        <span className="problem-title">{problem.title}</span>
+                        <a href={problem.link} className="view-problem-link" target="_blank" rel="noopener noreferrer">View Problem</a>
+                    </li>
                 ))}
             </ul>
         </div>

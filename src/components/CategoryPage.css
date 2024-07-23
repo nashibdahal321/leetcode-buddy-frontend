@@ -1,0 +1,46 @@
+/* src/components/CategoryPage.css */
+.category-page {
+    padding: 20px;
+}
+
+.category-page h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.problems-list {
+    list-style: none;
+    padding: 0;
+}
+
+.problem-item {
+    padding: 10px;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.problem-item:hover {
+    background-color: #f1f1f1;
+}
+
+.problem-title {
+    font-size: 18px;
+    color: #34495e;
+}
+
+.view-problem-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.view-problem-link:hover {
+    color: #2980b9;
+}
